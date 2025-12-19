@@ -138,6 +138,15 @@
             border-color: var(--gold-main);
         }
 
+        .post-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 1.5rem;
+            border: 2px solid rgba(184, 134, 11, 0.1);
+        }
+
         .post-date {
             font-size: 0.85rem;
             color: var(--gold-dark);
@@ -276,6 +285,10 @@
             .blog-intro, .blog-post-card {
                 padding: 1.5rem;
             }
+
+            .post-image {
+                height: 180px;
+            }
         }
     </style>
 </head>
@@ -283,54 +296,80 @@
     <div class="container">
         <header>
             <h1>Raw Paradise Blog</h1>
-            <p class="subtitle">Mein Weg zurück zur 100% Rohkost – ehrlich & authentisch</p>
+            <p class="subtitle">Mein Weg zurück zur 100% Rohkost — ehrlich & authentisch</p>
             <a href="../index.html" class="back-link">← Zurück zur Startseite</a>
         </header>
 
         <div class="blog-intro">
             <h2>Worum es hier geht</h2>
-            <p>2013 begann meine Rohkost-Reise. Von 2014 bis 2020 habe ich dann 6 Jahre lang zu <strong>100% vegan und roh</strong> gelebt – vollständig, ohne Ausnahmen. Es war die beste Zeit meines Lebens. 2021 warf mich ein tragisches Ereignis aus der Bahn, und in den folgenden Jahren fand ich immer wieder zurück – für Wochen, manchmal Monate. Aber der Entschluss war nie so stark wie jetzt.</p>
+            <p>2013 begann meine Rohkost-Reise. Von 2014 bis 2020 habe ich dann 6 Jahre lang zu <strong>100% vegan und roh</strong> gelebt — vollständig, ohne Ausnahmen. Es war die beste Zeit meines Lebens. 2021 warf mich ein tragisches Ereignis aus der Bahn, und in den folgenden Jahren fand ich immer wieder zurück — für Wochen, manchmal Monate. Aber der Entschluss war nie so stark wie jetzt.</p>
             
             <p>Heute bin ich wieder zu 100% dabei. In diesem Blog dokumentiere ich meinen Weg: die täglichen Erfahrungen, die kleinen Siege, die Momente des Zweifels und die überwältigende Klarheit, wenn alles stimmt.</p>
 
             <h3 style="color: var(--gold-dark); margin-top: 2rem; margin-bottom: 1rem;">Was ich in 6+ Jahren gelernt habe</h3>
-            <p>Ich kenne die vegane Rohkost in- und auswendig – nicht aus Büchern, sondern aus täglicher Praxis:</p>
+            <p>Ich kenne die vegane Rohkost in- und auswendig — nicht aus Büchern, sondern aus täglicher Praxis:</p>
             <ul style="list-style: none; padding: 0; margin: 1rem 0;">
-                <li style="padding: 0.4rem 0; padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--gold-main);">✓</span> Die Speisepläne, die funktionieren und satt machen</li>
-                <li style="padding: 0.4rem 0; padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--gold-main);">✓</span> Die Fallstricke – und wie man sie vermeidet</li>
-                <li style="padding: 0.4rem 0; padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--gold-main);">✓</span> Wie man nach einem Ausrutscher wieder aufsteht</li>
-                <li style="padding: 0.4rem 0; padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--gold-main);">✓</span> Die Küchenpraxis: Geräte, Werkzeuge, Einkaufsquellen</li>
-                <li style="padding: 0.4rem 0; padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--gold-main);">✓</span> Soziale Situationen meistern</li>
+                <li style="padding: 0.4rem 0; padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--gold-main);">✔</span> Die Speisepläne, die funktionieren und satt machen</li>
+                <li style="padding: 0.4rem 0; padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--gold-main);">✔</span> Die Fallstricke — und wie man sie vermeidet</li>
+                <li style="padding: 0.4rem 0; padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--gold-main);">✔</span> Wie man nach einem Ausrutscher wieder aufsteht</li>
+                <li style="padding: 0.4rem 0; padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--gold-main);">✔</span> Die Küchenpraxis: Geräte, Werkzeuge, Einkaufsquellen</li>
+                <li style="padding: 0.4rem 0; padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--gold-main);">✔</span> Soziale Situationen meistern</li>
             </ul>
 
-            <p><strong>Themen, über die ich schreibe:</strong> Mein täglicher Speiseplan, Hindernisse und wie ich sie überwinde, was sich in mir verändert, wie mein soziales Umfeld reagiert (und wo es Trennungen geben musste), praktische Tipps, meine Motivation – und natürlich Fotos, Videos und Rezepte.</p>
+            <p><strong>Themen, über die ich schreibe:</strong> Mein täglicher Speiseplan, Hindernisse und wie ich sie überwinde, was sich in mir verändert, wie mein soziales Umfeld reagiert (und wo es Trennungen geben musste), praktische Tipps, meine Motivation — und natürlich Fotos, Videos und Rezepte.</p>
         </div>
 
         <div class="blog-posts">
-            <!-- Placeholder für den ersten Blogpost -->
-            <div class="coming-soon">
-                <div class="coming-soon-icon">🌱</div>
-                <h3>Der erste Beitrag kommt bald!</h3>
-                <p>Ich arbeite gerade am ersten Blogbeitrag. Schau bald wieder vorbei!</p>
-                <p style="margin-top: 1rem; font-size: 0.95rem; color: #666;"><em>Geplant: "Tag 1 – Warum diesmal alles anders ist"</em></p>
-            </div>
-
-            <!-- Template für zukünftige Blogposts:
+            
+            <!-- BLOGPOST 1 -->
             <article class="blog-post-card">
+                <img src="images/image1.jpg" alt="Zurück zur Rohkost" class="post-image">
                 <span class="post-date">19. Dezember 2025</span>
-                <a href="post-titel.html" class="post-title">Titel des Blogposts</a>
+                <a href="post-1-zurueck-zur-rohkost.html" class="post-title">Zurück zur Rohkost — Über Verlust, Wiederkehr und die Entscheidung, wirklich zu leben</a>
                 <p class="post-excerpt">
-                    Hier steht eine kurze Vorschau des Blogposts. Etwa 2-3 Sätze, 
-                    die neugierig machen und zum Weiterlesen einladen...
+                    Es gibt Wege, die wir verlassen, nicht weil sie falsch waren, sondern weil das Leben uns mit einer solchen Wucht aus der Bahn wirft, dass wir vergessen, wer wir eigentlich sind. Sechs Jahre lang habe ich Rohkost gelebt. Es war die beste Zeit meines Lebens. Und jetzt kehre ich zurück.
                 </p>
-                <a href="post-titel.html" class="read-more">Weiterlesen</a>
+                <a href="post-1-zurueck-zur-rohkost.html" class="read-more">Weiterlesen</a>
                 <div class="post-tags">
+                    <a href="#" class="tag">Neuanfang</a>
                     <a href="#" class="tag">Motivation</a>
-                    <a href="#" class="tag">Anfang</a>
                     <a href="#" class="tag">Mindset</a>
+                    <a href="#" class="tag">Vorbereitung</a>
+                </div>
+            </article>
+
+            <!-- BLOGPOST 2 (AUSKOMMENTIERT - für später)
+            <article class="blog-post-card">
+                <img src="images/image2.jpg" alt="Blogpost 2" class="post-image">
+                <span class="post-date">XX. Dezember 2025</span>
+                <a href="post-2-titel.html" class="post-title">Titel für Blogpost 2</a>
+                <p class="post-excerpt">
+                    Kurze Vorschau für Blogpost 2...
+                </p>
+                <a href="post-2-titel.html" class="read-more">Weiterlesen</a>
+                <div class="post-tags">
+                    <a href="#" class="tag">Tag1</a>
+                    <a href="#" class="tag">Tag2</a>
                 </div>
             </article>
             -->
+
+            <!-- BLOGPOST 3 (AUSKOMMENTIERT - für später)
+            <article class="blog-post-card">
+                <img src="images/image3.jpg" alt="Blogpost 3" class="post-image">
+                <span class="post-date">XX. Dezember 2025</span>
+                <a href="post-3-titel.html" class="post-title">Titel für Blogpost 3</a>
+                <p class="post-excerpt">
+                    Kurze Vorschau für Blogpost 3...
+                </p>
+                <a href="post-3-titel.html" class="read-more">Weiterlesen</a>
+                <div class="post-tags">
+                    <a href="#" class="tag">Tag1</a>
+                    <a href="#" class="tag">Tag2</a>
+                </div>
+            </article>
+            -->
+
         </div>
 
         <div class="newsletter-box">
