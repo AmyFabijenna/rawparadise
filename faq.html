@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Häufig gestellte Fragen | Raw Paradise</title>
+    
+    <meta name="description" content="Antworten auf häufige Fragen zu Raw Paradise, veganer Rohkost und meiner Lifestyle-Begleitung.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --gold-dark: #B8860B;
+            --gold-main: #D4AF37;
+            --gold-light: #E6D399;
+            --pink-light: #ffe4e9;
+            --pink-pale: #f5e6e8;
+            --text-dark: #1a1a1a;
+            --text-body: #333333;
+            --white-glass: rgba(255, 255, 255, 0.6);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Raleway', sans-serif;
+            background: linear-gradient(135deg, var(--pink-pale) 0%, var(--pink-light) 50%, var(--pink-pale) 100%);
+            color: var(--text-body);
+            line-height: 1.8;
+            min-height: 100vh;
+        }
+
+        .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            background: var(--white-glass);
+            backdrop-filter: blur(10px);
+            border-radius: 25px;
+            padding: 2.5rem;
+            box-shadow: 0 8px 32px rgba(184, 134, 11, 0.15);
+            border: 2px solid rgba(184, 134, 11, 0.2);
+        }
+
+        h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.8rem;
+            font-weight: 300;
+            background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold-main) 50%, #C5B358 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2rem;
+            color: var(--text-body);
+            font-style: italic;
+            margin-bottom: 1.5rem;
+        }
+
+        .back-link {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--gold-main) 0%, #CFB53B 50%, #C5B358 100%);
+            color: var(--text-dark);
+            padding: 0.8rem 1.8rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 2px solid var(--gold-dark);
+            box-shadow: 0 4px 15px rgba(184, 134, 11, 0.3);
+        }
+
+        .back-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+        }
+
+        .faq-section {
+            background: var(--white-glass);
+            backdrop-filter: blur(15px);
+            border-radius: 25px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 32px rgba(184, 134, 11, 0.1);
+            border: 2px solid rgba(184, 134, 11, 0.15);
+        }
+
+        .faq-section h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: var(--gold-dark);
+            margin-bottom: 1.5rem;
+            text-align: center;
+            padding-bottom: 0.8rem;
+            border-bottom: 2px solid rgba(184, 134, 11, 0.2);
+        }
+
+        .faq-item {
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 15px;
+            margin-bottom: 1rem;
+            border: 2px solid rgba(184, 134, 11, 0.15);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover { border-color: var(--gold-main); }
+
+        .faq-question {
+            padding: 1.2rem 1.5rem;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 1.05rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(184, 134, 11, 0.05);
+            transition: background 0.3s;
+        }
+
+        .faq-question:hover { background: rgba(184, 134, 11, 0.1); }
+
+        .faq-icon {
+            font-size: 1.3rem;
+            color: var(--gold-dark);
+            transition: transform 0.3s ease;
+            font-weight: bold;
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.6);
+        }
+
+        .faq-answer.active { padding: 1.5rem; max-height: 1000px; }
+        .faq-answer p { margin-bottom: 1rem; }
+        .faq-answer p:last-child { margin-bottom: 0; }
+
+        .highlight {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(184, 134, 11, 0.15));
+            padding: 1rem 1.2rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--gold-main);
+            margin: 1rem 0;
+        }
+
+        .contact-box {
+            text-align: center;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(184, 134, 11, 0.15));
+            border-radius: 20px;
+            padding: 2rem;
+            margin-top: 2rem;
+            border: 2px solid rgba(184, 134, 11, 0.2);
+        }
+
+        .contact-box h3 {
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--gold-dark);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 4rem;
+            padding: 2rem;
+            color: var(--text-body);
+            font-size: 0.9rem;
+            background: rgba(255, 255, 255, 0.3);
+            border-top: 2px solid rgba(184, 134, 11, 0.2);
+            border-radius: 15px;
+        }
+
+        footer a {
+            color: var(--text-dark);
+            text-decoration: none;
+            margin: 0 0.8rem;
+            transition: color 0.3s;
+        }
+
+        footer a:hover { color: var(--gold-dark); }
+
+        @media (max-width: 768px) {
+            .container { padding: 15px; }
+            h1 { font-size: 2.2rem; }
+            .faq-section { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Häufig gestellte Fragen</h1>
+            <p class="subtitle">Alles, was du über Raw Paradise wissen möchtest</p>
+            <a href="index.html" class="back-link">← Zurück zur Startseite</a>
+        </header>
+
+        <section class="faq-section">
+            <h2>Über mich & meine Erfahrung</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Wer bist du und was qualifiziert dich?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Ich bin Berry und habe von 2014 bis 2020 sechs Jahre lang zu 100% vegan und roh gelebt. In dieser Zeit habe ich alles über die vegane Rohkost gelernt – was funktioniert, was nicht, welche Fallstricke es gibt und wie man wieder aufsteht, wenn man hingefallen ist.</p>
+                    <p>Ich bin <strong>keine</strong> ausgebildete Ernährungsberaterin. Was ich anbiete, ist Lifestyle-Begleitung basierend auf meinen persönlichen Erfahrungen. Ich teile, was für mich funktioniert hat.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Was ist mit deiner Rohkost-Reise nach 2020 passiert?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>2021 warf mich ein tragisches Ereignis aus der Bahn und ich bin von meinem Rohkostweg abgekommen. Die folgenden Jahre habe ich immer wieder versucht zurückzufinden – manchmal für Wochen, manchmal für Monate. Aber der Entschluss war nie so stark wie jetzt.</p>
+                    <p>Heute bin ich wieder zu 100% dabei und dokumentiere meinen Weg im Blog. Genau diese Erfahrung – das Fallen und Wiederaufstehen – macht mich zu einer authentischen Begleiterin.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <h2>Beratung & Preise</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Bietest du eine kostenlose Probestunde an?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="highlight">
+                        <p><strong>Ich biete ein kostenloses Erstgespräch an (20 Minuten).</strong></p>
+                        <p>In diesem Gespräch lernen wir uns kennen, du erzählst mir von deiner Situation und wir klären, ob eine Zusammenarbeit passt. Danach entscheidest du, ob du weitermachen möchtest.</p>
+                    </div>
+                    <p>Einzelgespräche sind reguläre Termine und kosten 55€ pro Stunde.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Was kostet ein Gespräch?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p><strong>Erstgespräch:</strong> Kostenlos (20 Minuten)</p>
+                    <p><strong>Einzelgespräch:</strong> 55€ (60 Minuten)</p>
+                    <p><strong>4er-Paket:</strong> 200€ (4 × 60 Minuten = 50€/Gespräch)</p>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">Alle Preise sind Endpreise. Als Kleinunternehmerin wird keine Umsatzsteuer ausgewiesen.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Wie funktioniert die Bezahlung?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Die Zahlung erfolgt im Voraus per Überweisung. Bei Paketen wird der Gesamtbetrag vor dem ersten Termin fällig.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Kann ich Termine verschieben oder absagen?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Ja, Termine können bis <strong>24 Stunden vorher</strong> kostenfrei verschoben werden. Bei kurzfristigerer Absage oder Nichterscheinen verfällt der Termin leider.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Wie läuft ein Gespräch ab?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Alle Gespräche finden online per Video statt (über kMeet). Du brauchst nur einen Computer oder Smartphone mit Kamera und Mikrofon.</p>
+                    <p>Im Gespräch teile ich meine Erfahrungen zu deinen Fragen, gebe dir praktische Tipps und begleite dich motivierend. Es ist ein Austausch auf Augenhöhe – ich erzähle dir, was für mich funktioniert hat.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <h2>Über vegane Rohkost</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Was genau isst du?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Mein Ansatz ist hauptsächlich <strong>fruktarisch</strong> – Früchte bilden die Basis meiner Ernährung. Dazu esse ich:</p>
+                    <p>• Grünes Blattgemüse und Salate<br>
+                    • Rohes Gemüse nach Bedarf<br>
+                    • Hochwertiges Olivenöl<br>
+                    • Natürliches Salz und rohe Gewürze<br>
+                    • Ab und zu: rohe Snacks, Kakao, Nüsse</p>
+                    <p>Alles ist 100% roh und 100% vegan.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Ist Rohkost nicht sehr teuer?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Es kommt darauf an, wie man es angeht. Früchte der Saison, lokales Gemüse und cleveres Einkaufen machen Rohkost erschwinglich. Ich teile im Blog und in Gesprächen meine Tipps, wie ich günstig an gute Qualität komme.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Warum sagst du nicht "abnehmen"?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Unser Unterbewusstsein reagiert stark auf Worte. "Abnehmen" enthält "ab" – etwas verlieren, etwas aufgeben, etwas Negatives. "Schlank werden" oder "Wunschfigur erreichen" fokussiert auf das positive Ziel, das wir anstreben. Das macht einen Unterschied!</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <h2>Wichtige Hinweise</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Ist das eine Ernährungsberatung?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="highlight">
+                        <p><strong>Nein.</strong> Ich bin keine ausgebildete Ernährungsberaterin und biete keine Ernährungsberatung an.</p>
+                    </div>
+                    <p>Was ich anbiete, ist <strong>Lifestyle-Begleitung</strong>: Ich teile meine persönlichen Erfahrungen mit der veganen Rohkost und begleite dich motivierend auf deinem eigenen Weg. Bei gesundheitlichen Fragen oder Bedenken wende dich bitte an entsprechende Fachpersonen.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Für wen ist Raw Paradise geeignet?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Raw Paradise ist für gesunde Erwachsene, die neugierig auf vegane Rohkost sind und sich authentische Begleitung wünschen. Primär richte ich mich an Frauen, aber auch Männer sind willkommen.</p>
+                    <p><strong>Nicht geeignet</strong> ist mein Angebot für Menschen mit Essstörungen, akuten gesundheitlichen Problemen oder wenn professionelle medizinische/therapeutische Unterstützung benötigt wird.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="contact-box">
+            <h3>Noch Fragen?</h3>
+            <p>Ich beantworte gerne alle deine Fragen persönlich.</p>
+            <a href="mailto:amylan@ik.me" class="back-link" style="margin-top: 1rem; display: inline-block;">✉️ E-Mail schreiben</a>
+        </div>
+
+        <footer>
+            <p>
+                <a href="index.html">Startseite</a> | 
+                <a href="blog/index.html">Blog</a> |
+                <a href="rezepte.html">Rezepte</a> |
+                <a href="beratung.html">Beratung</a> |
+                <a href="agb.html">AGB</a> | 
+                <a href="datenschutz.html">Datenschutz</a>
+            </p>
+            <p style="margin-top: 1rem;">© 2025 Raw Paradise | Berry</p>
+        </footer>
+    </div>
+
+    <script>
+        function toggleFAQ(element) {
+            const faqItem = element.parentElement;
+            const answer = faqItem.querySelector('.faq-answer');
+            const icon = element.querySelector('.faq-icon');
+            
+            if (answer.classList.contains('active')) {
+                answer.classList.remove('active');
+                icon.textContent = '+';
+            } else {
+                answer.classList.add('active');
+                icon.textContent = '−';
+            }
+        }
+
+        // Open first FAQ item by default
+        document.addEventListener('DOMContentLoaded', function() {
+            const firstFaq = document.querySelector('.faq-item');
+            if (firstFaq) {
+                firstFaq.querySelector('.faq-answer').classList.add('active');
+                firstFaq.querySelector('.faq-icon').textContent = '−';
+            }
+        });
+    </script>
+</body>
+</html>
